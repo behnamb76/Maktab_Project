@@ -7,7 +7,6 @@ import ir.maktabsharif.finalproject.model.dto.response.CourseRespDTO;
 import ir.maktabsharif.finalproject.service.CourseService;
 import ir.maktabsharif.finalproject.service.impl.CourseServiceImpl;
 import ir.maktabsharif.finalproject.service.impl.UserServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +18,6 @@ import java.util.List;
 public class CourseController {
     private final CourseService courseService;
 
-    @Autowired
     public CourseController(CourseServiceImpl courseService, UserServiceImpl userService) {
         this.courseService = courseService;
     }

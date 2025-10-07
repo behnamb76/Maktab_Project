@@ -10,10 +10,9 @@ import ir.maktabsharif.finalproject.repository.QuestionBankRepository;
 import ir.maktabsharif.finalproject.repository.QuestionRepository;
 import ir.maktabsharif.finalproject.service.CourseService;
 import ir.maktabsharif.finalproject.service.QuestionService;
-import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -26,7 +25,6 @@ public class QuestionServiceImpl implements QuestionService {
     private final CourseService courseService;
     private final ExamRepository examRepository;
 
-    @Autowired
     public QuestionServiceImpl(QuestionRepository questionRepository, QuestionBankRepository questionBankRepository, OptionRepository optionRepository, CourseService courseService, ExamRepository examRepository) {
         this.questionRepository = questionRepository;
         this.questionBankRepository = questionBankRepository;

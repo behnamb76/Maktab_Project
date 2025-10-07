@@ -11,7 +11,6 @@ import ir.maktabsharif.finalproject.repository.CourseMemberRepository;
 import ir.maktabsharif.finalproject.repository.CourseRepository;
 import ir.maktabsharif.finalproject.repository.UserRepository;
 import ir.maktabsharif.finalproject.service.CourseService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +23,6 @@ public class CourseServiceImpl implements CourseService {
     private final UserRepository userRepository;
     private final CourseMemberRepository courseMemberRepository;
 
-    @Autowired
     public CourseServiceImpl(CourseRepository courseRepository, UserRepository userRepository, CourseMemberRepository courseMemberRepository) {
         this.courseRepository = courseRepository;
         this.userRepository = userRepository;

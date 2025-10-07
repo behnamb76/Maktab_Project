@@ -1,7 +1,8 @@
 package ir.maktabsharif.finalproject.model;
 
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
 
 @Entity
 @Getter

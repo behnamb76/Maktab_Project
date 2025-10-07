@@ -4,7 +4,6 @@ import ir.maktabsharif.finalproject.model.Question;
 import ir.maktabsharif.finalproject.model.dto.request.QuestionReqDTO;
 import ir.maktabsharif.finalproject.service.ExamService;
 import ir.maktabsharif.finalproject.service.QuestionService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,7 +18,6 @@ public class QuestionController {
     private final QuestionService questionService;
     private final ExamService examService;
 
-    @Autowired
     public QuestionController(QuestionService questionService, ExamService examService) {
         this.questionService = questionService;
         this.examService = examService;

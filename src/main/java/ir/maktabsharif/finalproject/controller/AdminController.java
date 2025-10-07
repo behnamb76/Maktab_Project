@@ -4,7 +4,6 @@ import ir.maktabsharif.finalproject.model.dto.request.UserReqDTO;
 import ir.maktabsharif.finalproject.model.dto.response.UserRespDTO;
 import ir.maktabsharif.finalproject.model.enums.Status;
 import ir.maktabsharif.finalproject.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +15,6 @@ import java.util.List;
 public class AdminController {
     private final UserService userService;
 
-    @Autowired
     public AdminController(UserService userService) {
         this.userService = userService;
     }

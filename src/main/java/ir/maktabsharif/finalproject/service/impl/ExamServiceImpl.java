@@ -9,10 +9,9 @@ import ir.maktabsharif.finalproject.repository.*;
 import ir.maktabsharif.finalproject.service.CourseService;
 import ir.maktabsharif.finalproject.service.ExamService;
 import ir.maktabsharif.finalproject.service.QuestionService;
-import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -29,7 +28,6 @@ public class ExamServiceImpl implements ExamService {
     private final TemporaryAnswerRepository temporaryAnswerRepository;
     private final CourseMemberRepository courseMemberRepository;
 
-    @Autowired
     public ExamServiceImpl(ExamRepository examRepository, CourseServiceImpl courseService, ExamQuestionRepository examQuestionRepository, QuestionService questionService, AnswerRepository answerRepository, ExamAttemptRepository examAttemptRepository, UserRepository userRepository, TemporaryAnswerRepository temporaryAnswerRepository, CourseMemberRepository courseMemberRepository) {
         this.examRepository = examRepository;
         this.courseService = courseService;

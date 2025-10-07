@@ -5,7 +5,6 @@ import ir.maktabsharif.finalproject.model.enums.ExamStatus;
 import ir.maktabsharif.finalproject.service.CourseService;
 import ir.maktabsharif.finalproject.service.ExamService;
 import ir.maktabsharif.finalproject.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +22,6 @@ public class StudentController {
     private final UserService userService;
     private final ExamService examService;
 
-    @Autowired
     public StudentController(CourseService courseService, UserService userService, ExamService examService) {
         this.courseService = courseService;
         this.userService = userService;

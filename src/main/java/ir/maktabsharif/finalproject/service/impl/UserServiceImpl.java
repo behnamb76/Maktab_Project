@@ -9,7 +9,6 @@ import ir.maktabsharif.finalproject.model.enums.Status;
 import ir.maktabsharif.finalproject.repository.RoleRepository;
 import ir.maktabsharif.finalproject.repository.UserRepository;
 import ir.maktabsharif.finalproject.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -26,7 +25,6 @@ public class UserServiceImpl implements UserService {
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
 
-    @Autowired
     public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;

@@ -8,10 +8,9 @@ import ir.maktabsharif.finalproject.repository.ExamResultRepository;
 import ir.maktabsharif.finalproject.service.ExamResultService;
 import ir.maktabsharif.finalproject.service.ExamService;
 import ir.maktabsharif.finalproject.service.UserService;
-import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +21,6 @@ public class ExamResultServiceImpl implements ExamResultService {
     private final ExamService examService;
     private final UserService userService;
 
-    @Autowired
     public ExamResultServiceImpl(ExamResultRepository examResultRepository, AnswerRepository answerRepository, ExamService examService, UserService userService) {
         this.examResultRepository = examResultRepository;
         this.answerRepository = answerRepository;

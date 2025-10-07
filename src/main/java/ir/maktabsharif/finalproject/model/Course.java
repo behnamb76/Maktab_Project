@@ -1,8 +1,11 @@
 package ir.maktabsharif.finalproject.model;
 
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -15,11 +18,11 @@ import java.util.Set;
 public class Course extends BaseModel {
     private String title;
 
-    @Temporal(TemporalType.DATE)
+    //@Temporal(TemporalType.DATE)
     @Column(name = "start_date")
     private LocalDate startDate;
 
-    @Temporal(TemporalType.DATE)
+    //@Temporal(TemporalType.DATE)
     @Column(name = "end_date")
     private LocalDate endDate;
 
