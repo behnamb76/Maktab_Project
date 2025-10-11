@@ -61,32 +61,6 @@ public class SecurityConfig {
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
-        /*http
-                .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/", "/login", "/register")
-                                .permitAll()
-                                .requestMatchers("/admin/**").hasRole("ADMIN")
-                                .requestMatchers("/teacher/**").hasRole("TEACHER")
-                                .requestMatchers("/student/**").hasRole("STUDENT")
-                                .requestMatchers("/dashboard", "/profile")
-                                .authenticated()
-                                .anyRequest()
-                                .authenticated()
-                )
-                .formLogin(login -> login
-                        .loginPage("/login")
-                        .defaultSuccessUrl("/dashboard", true)
-                        .failureUrl("/login?error=true")
-                        .permitAll()
-                )
-                .logout(logout -> logout
-                        .logoutUrl("/logout")
-                        .logoutSuccessUrl("/login?logout=true")
-                        .invalidateHttpSession(true)
-                        .clearAuthentication(true)
-                        .permitAll()
-                );
-        return http.build();*/
     }
 
     @Bean
